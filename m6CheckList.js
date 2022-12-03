@@ -51,3 +51,12 @@ const multiLine = (n1, n2) => {
 const numbers = [17, 82, 45, 78, 80, 97, 150];
 const division = numbers.map(n => n / 7);
 // console.log(division);
+
+// checkList: 5
+/*
+gap(), forEach(), filter(), find() done.
+*/
+
+// checkList: 6 
+const { institute } = person;
+console.log(institute);
