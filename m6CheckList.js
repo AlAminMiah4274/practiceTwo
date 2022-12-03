@@ -16,7 +16,8 @@ const person = {
 // console.log(person.job());
 
 // checkList: 2
-const stringVariable = ``;
+const stringVariable = `North South University, Micro Economics, Al Amin Miah`;
+console.log(stringVariable);
 
 // checkList: 3.1 
 const returnNumber = () => {
@@ -59,4 +60,7 @@ gap(), forEach(), filter(), find() done.
 
 // checkList: 6 
 const { institute } = person;
-console.log(institute);
+// console.log(institute);
+
+const [, balance] = person.subjects;
+// console.log(balance);
