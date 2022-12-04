@@ -39,6 +39,20 @@ const add = (n1, n2) => {
 };
 // console.log(add(4, 15));
 
+// extra
+const twoParameter = (n1, n2) => {
+    const add = n1 + 7;
+    const add2 = n2 + 5;
+    const result = add + add2;
+    if (result % 2 === 0) {
+        return true;
+    }
+    else {
+        return false;
+    }
+}
+// console.log(twoParameter(9, 6));
+
 // checkList: 3.4 
 const multiLine = (n1, n2) => {
     const add = n1 + 7;
