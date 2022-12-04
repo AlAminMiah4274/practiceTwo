@@ -27,6 +27,7 @@ const displayPhotos = photos => {
             <h5 class="card-title">${photo.title}</h5>
             <p class="card-text">This is a longer card with supporting text below as a natural lead-in
                 to additional content. This content is a little bit longer.</p>
+                <button href="#" class="btn btn-primary">More Detail</button>
             </div>
         </div>
         `;
