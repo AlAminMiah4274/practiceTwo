@@ -21,7 +21,7 @@ const displayPhotos = photos => {
         const photosDiv = document.createElement('div');
         photosDiv.classList.add('col');
         photosDiv.innerHTML = `
-        <div onclick="loadPhotoDetail(${photo.id})" class="card h-100">
+        <div onclick="loadPhotoDetail(${photo.id})" class="card h-100 p-4">
             <img src="${photo.thumbnailUrl}" class="card-img-top" alt="...">
             <div class="card-body">
             <h5 class="card-title">${photo.title}</h5>
