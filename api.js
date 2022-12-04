@@ -21,13 +21,13 @@ const displayPhotos = photos => {
         const photosDiv = document.createElement('div');
         photosDiv.classList.add('col');
         photosDiv.innerHTML = `
-        <div onclick="loadPhotoDetail(${photo.id})" class="card h-100 p-4">
+        <div class="card h-100 p-4">
             <img src="${photo.thumbnailUrl}" class="card-img-top" alt="...">
             <div class="card-body">
             <h5 class="card-title">${photo.title}</h5>
             <p class="card-text">This is a longer card with supporting text below as a natural lead-in
                 to additional content. This content is a little bit longer.</p>
-                <button href="#" class="btn btn-primary">More Detail</button>
+                <button onclick="loadPhotoDetail(${photo.id})" href="#" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#photoDetailModal">More Detail</button>
             </div>
         </div>
         `;
@@ -47,7 +47,17 @@ const loadPhotoDetail = async (id) => {
 }
 
 const displayPhotoDetail = photo => {
-    console.log(photo);
+    // photo title
+    const photoTitle = document.getElementById('photoDetailModalLabel');
+    photoTitle.innerText = photo.title;
+
+    // detail body
+    const detailBody = document.getElementById('detail-body');
+    detailBody.innerHTML = `
+        <img src="${photo.thumbnailUrl}">
+        <p>Photo ID: ${photo.id}</p>
+        <p>URL: ${photo.url}</p>
+    `;
 }
 
 loadPhotos();
