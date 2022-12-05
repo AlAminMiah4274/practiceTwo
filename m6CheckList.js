@@ -17,7 +17,7 @@ const person = {
 
 // checkList: 2
 const stringVariable = `North South University, Micro Economics, Al Amin Miah`;
-console.log(stringVariable);
+// console.log(stringVariable);
 
 // checkList: 3.1 
 const returnNumber = () => {
@@ -54,13 +54,27 @@ const twoParameter = (n1, n2) => {
 // console.log(twoParameter(9, 6));
 
 // checkList: 3.4 
-const multiLine = (n1, n2) => {
-    const add = n1 + 7;
-    const add2 = n2 + 7;
-    const sum = add + add2;
-    return sum;
+const multiLine = (...numbers) => {
+    const sum = numbers.reduce((sum, n) => sum + n);
+    const result = Math.pow(sum, 2);
+    return result;
 };
-// console.log(multiLine(10, 10));
+// console.log(multiLine(4, 5, 2));
+
+// sum all numbers of a array:
+const numbs = [12, 48, 45, 78];
+const sum = numbs.reduce((s, n) => s + n);
+// console.log(sum);
+
+// square & sum the all numbers:
+const square = (numbers) => {
+    const sum = numbers.reduce((sum, n) => sum + n);
+    const result = Math.pow(sum, 2);
+    return result;
+}
+const age = [4, 5, 2];
+const result = square(age);
+// console.log(result);
 
 // checkList: 4 
 const numbers = [17, 82, 45, 78, 80, 97, 150];
